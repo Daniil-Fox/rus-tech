@@ -1,0 +1,44 @@
+// ваш код
+.header {
+  padding: 20px 0;
+
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+
+  &__container,
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    gap: 60px;
+  }
+
+  &__tel {
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #000;
+
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__addr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+  }
+}

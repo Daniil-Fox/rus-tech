@@ -1,0 +1,60 @@
+.problem {
+  padding: 65px 0;
+
+  &__subtitle {
+    max-width: 720px;
+  }
+
+  &__header {
+    margin-bottom: 70px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__warning {
+    display: flex;
+    grid-column: 2 span;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 30px;
+    padding: 24px 31px;
+    background: rgba(184, 234, 143, 0.3);
+
+    p {
+      max-width: 740px;
+    }
+
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}
+
+.problem-item {
+  padding: 60px 40px;
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  gap: 25px;
+
+  &__fig {
+    display: block;
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 110%;
+    color: #76b711;
+  }
+
+  &__capture {
+    margin-bottom: 25px;
+  }
+}

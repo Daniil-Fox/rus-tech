@@ -1,0 +1,50 @@
+.poss {
+  padding: 65px 0;
+
+  &__header {
+    margin-bottom: 70px;
+    max-width: 740px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+.poss-item {
+  padding: 40px;
+  border-radius: 30px;
+  background-color: #fff;
+
+  &__capture {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    color: #000;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+  }
+}

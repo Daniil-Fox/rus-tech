@@ -1,0 +1,38 @@
+.imp {
+  padding: 65px 0;
+
+  &__header {
+    margin-bottom: 70px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    &--long {
+      grid-row: 2 span;
+      background-image: url('./../img/imp-corn.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .imp-item__capture {
+        max-width: 200px;
+
+      }
+    }
+  }
+}
+
+.imp-item {
+  padding: 40px;
+  border-radius: 30px;
+  background-color: #fff;
+
+  &__capture {
+    margin-bottom: 30px;
+  }
+}

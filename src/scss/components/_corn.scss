@@ -1,0 +1,46 @@
+.corn {
+  padding-top: 130px;
+  padding-bottom: 65px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &__img {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.corn-item {
+  padding: 60px;
+  border-radius: 30px;
+  background-color: #fff;
+
+  &__title {
+    font-family: var(--font4);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+
+    color: #000;
+
+    span {
+      color: #76b711;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
