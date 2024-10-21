@@ -10,7 +10,34 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
+/* harmony import */ var _components_faq_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/faq.js */ "./src/js/components/faq.js");
 
+
+
+/***/ }),
+
+/***/ "./src/js/components/faq.js":
+/*!**********************************!*\
+  !*** ./src/js/components/faq.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const faqItems = document.querySelectorAll('.faq-item');
+if (faqItems.length > 0) {
+  faqItems.forEach((item, index) => {
+    const btn = item.querySelector('.faq-item__btn');
+    const content = item.querySelector('.faq-item__content');
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      let isActive = item.classList.toggle('active');
+      content.style.maxHeight = isActive ? content.scrollHeight + 'px' : null;
+    });
+  });
+}
 
 /***/ }),
 
@@ -23,55 +50,74 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 
-window.addEventListener('DOMContentLoaded', () => {
-  const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-    let swiper;
-    breakpoint = window.matchMedia(breakpoint);
-    const enableSwiper = function (className, settings) {
-      swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(className, settings);
-      if (callback) {
-        callback(swiper);
-      }
-    };
-    const checker = function () {
-      if (breakpoint.matches) {
-        return enableSwiper(swiperClass, swiperSettings);
-      } else {
-        if (swiper !== undefined) swiper.destroy(true, true);
-        return;
-      }
-    };
-    breakpoint.addEventListener('change', checker);
-    checker();
-  };
-  const someFunc = instance => {
-    if (instance) {
-      instance.on('slideChange', function (e) {
-        console.log('*** mySwiper.activeIndex', instance.activeIndex);
-      });
-    }
-  };
-  resizableSwiper('(max-width: 1280px)', '.slider-1', {
-    loop: true,
-    spaceBetween: 32,
-    slidesPerView: 1,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    }
-  }, someFunc);
-  resizableSwiper('(max-width: 1500px)', '.slider-2', {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
-    breakpoints: {
-      1200: {
-        spaceBetween: 20
-      }
-    }
-  });
-});
+
+// window.addEventListener('DOMContentLoaded', () => {
+
+//   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+//     let swiper;
+
+//     breakpoint = window.matchMedia(breakpoint);
+
+//     const enableSwiper = function(className, settings) {
+//       swiper = new Swiper(className, settings);
+
+//       if (callback) {
+//         callback(swiper);
+//       }
+//     }
+
+//     const checker = function() {
+//       if (breakpoint.matches) {
+//         return enableSwiper(swiperClass, swiperSettings);
+//       } else {
+//         if (swiper !== undefined) swiper.destroy(true, true);
+//         return;
+//       }
+//     };
+
+//     breakpoint.addEventListener('change', checker);
+//     checker();
+//   }
+
+//   const someFunc = (instance) => {
+//     if (instance) {
+//       instance.on('slideChange', function (e) {
+//         console.log('*** mySwiper.activeIndex', instance.activeIndex);
+//       });
+//     }
+//   };
+
+//   resizableSwiper(
+//     '(max-width: 1280px)',
+//     '.slider-1',
+//     {
+//       loop: true,
+//       spaceBetween: 32,
+//       slidesPerView: 1,
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//     },
+//     someFunc
+//   );
+
+//   resizableSwiper(
+//     '(max-width: 1500px)',
+//     '.slider-2',
+//     {
+//       loop: true,
+//       spaceBetween: 10,
+//       slidesPerView: 3,
+//       freeMode: true,
+//       breakpoints: {
+//         1200: {
+//           spaceBetween: 20,
+//         }
+//       }
+//     }
+//   );
+// });
 
 /***/ }),
 
