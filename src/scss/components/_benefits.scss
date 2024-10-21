@@ -10,6 +10,12 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
+
+  &--sec {
+    .b-item__fig {
+      color: #76b711;
+    }
+  }
 }
 
 .b-item {
