@@ -1,20 +1,49 @@
 .faq {
   padding: 65px 0;
 
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
+
+    @include desktop {
+      gap: 80px;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
   }
 
   &__header {
     margin-bottom: 70px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .faq-item {
   &:not(:last-child) {
     margin-bottom: 70px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__header {

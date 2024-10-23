@@ -1,12 +1,32 @@
 .problem {
   padding: 65px 0;
 
-  &__subtitle {
-    max-width: 720px;
+  @include desktop {
+    padding: 60px 0;
   }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  // &__subtitle {
+  //   max-width: 720px;
+
+  //   @include desktop {
+  //     max-width: 35%;
+  //   }
+  // }
 
   &__header {
     margin-bottom: 70px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__items {
@@ -28,11 +48,16 @@
     padding: 24px 31px;
     background: rgba(184, 234, 143, 0.3);
 
+    @include tablet {
+      grid-column: 3 span;
+    }
+
     p {
       max-width: 740px;
     }
 
     svg {
+      flex-shrink: 0;
       width: 34px;
       height: 34px;
     }
@@ -46,12 +71,37 @@
   display: flex;
   gap: 25px;
 
+  @include desktop {
+    padding: 40px;
+    border-radius: 30px;
+    gap: 10px;
+  }
+
+  @include tablet {
+    padding: 20px;
+  }
+
+  &__left {
+    @include desktop {
+      order: 10;
+    }
+  }
+
   &__fig {
     display: block;
     font-weight: 600;
     font-size: 62px;
     line-height: 110%;
     color: #76b711;
+
+    @include desktop {
+      font-size: 50px;
+    }
+
+    @include tablet {
+      font-size: 42px;
+    }
+
   }
 
   &__capture {

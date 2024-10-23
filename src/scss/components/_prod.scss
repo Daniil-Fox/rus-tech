@@ -1,8 +1,24 @@
 .prod {
   padding: 65px 0;
 
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__subtitle {
@@ -26,12 +42,23 @@
   justify-content: space-between;
   gap: 30px;
 
+  @include desktop {
+    padding: 20px 30px;
+  }
+
   &__img {
     height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+      height: 165px;
+    }
 
     img {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
       object-fit: contain;
     }
   }
@@ -48,6 +75,10 @@
     line-height: 110%;
     color: #000;
 
+    @include desktop {
+      font-size: 16px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 15px;
     }
@@ -58,7 +89,10 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 110%;
-
     color: #000;
+
+    @include desktop {
+      font-size: 14px;
+    }
   }
 }

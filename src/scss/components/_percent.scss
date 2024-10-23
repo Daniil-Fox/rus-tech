@@ -5,9 +5,15 @@
     overflow: hidden;
     background-color: #fff;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     gap: 20px;
+
+    @include desktop {
+      padding: 15px;
+      gap: 30px;
+    }
   }
 
   &__item {
@@ -21,11 +27,23 @@
       font-size: 128px;
       line-height: 110%;
       color: #76b711;
+
+      @include desktop {
+        font-size: 110px;
+      }
     }
 
     p {
       font-size: 26px;
       font-weight: 600;
+
+      @include desktop {
+        font-size: 22px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
     }
 
     &:nth-child(2) {

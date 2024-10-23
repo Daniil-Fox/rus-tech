@@ -3,9 +3,13 @@
   background-image: url('./../img/hero-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: center right;
   border-radius: 0 0 330px 330px;
   overflow: hidden;
+
+  @include desktop {
+    border-radius: 0 0 100px 100px;
+  }
 
   &__container {
     display: flex;
@@ -18,7 +22,6 @@
   }
 
   &__title {
-    max-width: 900px;
     margin: 0;
     margin-bottom: 22px;
     font-family: var(--font4);
@@ -26,6 +29,10 @@
     font-size: 74px;
     line-height: 110%;
     color: #fff;
+
+    @include desktop {
+      font-size: 44px;
+    }
   }
 
   &__subtitle {
@@ -35,6 +42,11 @@
     font-weight: 600;
     font-size: 28px;
     color: #fff;
+
+    @include desktop {
+      font-size: 24px;
+      max-width: 460px;
+    }
   }
 
   &__desc {
@@ -44,12 +56,18 @@
     font-weight: 600;
     font-size: 24px;
     color: #fff;
+
+    @include desktop {
+      font-size: 20px;
+    }
   }
 
   &__right {
+    flex-shrink: 0;
     display: flex;
     align-items: flex-end;
     gap: 40px;
+    margin-left: auto;
   }
 }
 
@@ -57,8 +75,13 @@
   border-radius: 310px 310px 0 0;
   background: #f0f2f4;
   --interval: 33px;
-  flex-basis: 215px;
+  width: 215px;
   text-align: center;
+  flex-shrink: 0;
+
+  @include desktop {
+    width: 170px;
+  }
 
   &__fig {
     display: block;
@@ -68,6 +91,10 @@
     line-height: 110%;
     text-align: center;
     color: #3f6600;
+
+    @include desktop {
+      font-size: 40px;
+    }
   }
 
   &__capture {
@@ -77,17 +104,42 @@
     font-size: 20px;
     line-height: 110%;
     color: #000;
+
+    @include desktop {
+      font-size: 14px;
+    }
   }
 
   &:nth-child(1) {
     padding: 67.5px var(--interval);
+
+    @include desktop {
+      padding: 57px 35px;
+    }
   }
 
   &:nth-child(2) {
     padding: 124px var(--interval);
+
+    @include desktop {
+      padding: 72px 18px;
+
+      .hero-item__fig {
+        font-size: 52px;
+        color: #76b711;
+      }
+
+      .hero-item__capture {
+        font-size: 18px;
+      }
+    }
   }
 
   &:nth-child(3) {
     padding: 90px var(--interval);
+
+    @include desktop {
+      padding: 57px 35px;
+    }
   }
 }

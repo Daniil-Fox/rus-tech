@@ -132,6 +132,14 @@ a {
   font-size: 24px;
   line-height: 120%;
   color: #000;
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
 }
 
 .title2 {
@@ -142,6 +150,14 @@ a {
   line-height: 110%;
   text-transform: uppercase;
   color: #76b711;
+
+  @include desktop {
+    font-size: 44px;
+  }
+
+  @include tablet {
+    font-size: 38px;
+  }
 }
 
 .subtitle {
@@ -150,6 +166,14 @@ a {
   font-size: 38px;
   line-height: 110%;
   color: #000;
+
+  @include desktop {
+    font-size: 28px;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
 }
 
 .capture {
@@ -159,4 +183,12 @@ a {
   font-size: 24px;
   line-height: 110%;
   color: #000;
+
+  @include desktop {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
 }

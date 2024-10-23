@@ -17,5 +17,13 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #000;
+
+    @include desktop {
+      font-size: 12px;
+    }
+
+    @include tablet {
+      font-size: 10px;
+    }
   }
 }

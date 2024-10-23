@@ -1,8 +1,24 @@
 .imp {
   padding: 65px 0;
 
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__items {
@@ -31,6 +47,14 @@
   padding: 40px;
   border-radius: 30px;
   background-color: #fff;
+
+  @include desktop {
+    padding: 30px;
+  }
+
+  @include tablet {
+    padding: 20px;
+  }
 
   &__capture {
     margin-bottom: 30px;

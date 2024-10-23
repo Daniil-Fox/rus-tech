@@ -1,6 +1,14 @@
 .tech {
   padding: 65px 0;
 
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,6 +18,10 @@
   &__title {
     margin: 0;
     margin-bottom: 30px;
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -17,6 +29,12 @@
     background-color: #fff;
     border-radius: 30px;
     overflow: hidden;
+
+    @include desktop {
+      padding: 40px;
+    }
+
+
   }
 
   &__capture {

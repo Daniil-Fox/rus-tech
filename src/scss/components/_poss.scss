@@ -1,9 +1,25 @@
 .poss {
   padding: 65px 0;
 
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
     max-width: 740px;
+
+    @include desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__items {
@@ -32,6 +48,17 @@
   padding: 40px;
   border-radius: 30px;
   background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+
+  &__fig {
+    span {
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 110%;
+      color: #a1d94a;
+    }
+  }
 
   &__capture {
     margin: 0;
@@ -40,11 +67,27 @@
     font-size: 28px;
     line-height: 110%;
     color: #000;
+
+    @include desktop {
+      font-size: 22px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 
   &__list {
     margin: 0;
     padding: 0;
     padding-left: 25px;
+
+    @include desktop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }

@@ -2,6 +2,14 @@
   padding-top: 130px;
   padding-bottom: 65px;
 
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,6 +20,10 @@
     position: relative;
     border-radius: 30px;
     overflow: hidden;
+
+    @include desktop {
+      order: -1;
+    }
 
     img {
       position: absolute;
@@ -28,13 +40,32 @@
   border-radius: 30px;
   background-color: #fff;
 
+  @include desktop {
+    padding: 40px;
+  }
+
+  @include tablet {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
   &__title {
+    margin: 0;
+    margin-bottom: 40px;
     font-family: var(--font4);
     font-weight: 700;
     font-size: 30px;
     line-height: 120%;
 
     color: #000;
+
+    @include desktop {
+      font-size: 26px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
 
     span {
       color: #76b711;
