@@ -157,4 +157,23 @@
       font-size: 16px;
     }
   }
+
+  &--sec {
+    padding: inherit;
+    background: #f0f2f4;
+    box-shadow: none;
+
+    .header__container {
+      padding: 20px var(--container-offset);
+      background: #fff;
+      margin: 0 var(--container-offset);
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+
+      @include small-tablet {
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
 }

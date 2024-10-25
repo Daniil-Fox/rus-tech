@@ -16,6 +16,7 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  background-color: #f0f2f4;
 }
 
 img {
@@ -30,7 +31,7 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
-  background-color: #f0f2f4;
+
 }
 
 .is-hidden {
@@ -211,4 +212,13 @@ a {
   @include tablet {
     font-size: 18px;
   }
+}
+
+.just-validate-error-label {
+  display: none;
+}
+
+.just-validate-error-field,
+.just-validate-error-field~.form__box {
+  border-color: rgb(251, 123, 123) !important;
 }
