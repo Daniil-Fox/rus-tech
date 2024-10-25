@@ -712,7 +712,7 @@ a {
 .hero__extra--mob {
   display: none;
 }
-@media (max-width: 576px) {
+@media (max-width: 850px) {
   .hero__extra--mob {
     display: block;
   }

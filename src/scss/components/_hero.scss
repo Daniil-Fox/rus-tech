@@ -144,7 +144,7 @@
     &--mob {
       display: none;
 
-      @include mobile {
+      @include small-tablet {
         display: block;
       }
     }
