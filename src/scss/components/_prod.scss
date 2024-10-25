@@ -9,6 +9,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
 
@@ -19,6 +23,7 @@
     @include tablet {
       margin-bottom: 20px;
     }
+
   }
 
   &__subtitle {
@@ -29,6 +34,15 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      display: flex;
+      gap: 0;
+    }
   }
 }
 
@@ -41,9 +55,21 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
+  box-sizing: border-box;
+  height: auto;
 
   @include desktop {
     padding: 20px 30px;
+  }
+
+  @include small-tablet {
+    padding: 40px;
+  }
+
+  @include mobile {
+    width: 205px;
+    padding: 30px;
+    flex-shrink: 0;
   }
 
   &__img {

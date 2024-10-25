@@ -4,9 +4,85 @@
 
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
+  position: relative;
+
+  @include small-tablet {
+    background: #f0f2f4;
+    box-shadow: none;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 90;
+
+    display: block;
+    width: 150px;
+    height: auto;
+
+    img {
+      display: block;
+      height: auto;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    @include small-tablet {
+      width: 115px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 90;
+
+    @include small-tablet {
+      display: flex;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 20px;
+      border-radius: 5px;
+      background-color: #2f3334;
+      transition: .3s ease-out;
+    }
+
+    .line {
+      height: 2px;
+      width: 20px;
+      border-radius: 5px;
+      background-color: #2f3334;
+      transition: .3s ease-out;
+    }
+
+    &.active {
+      .line {
+        transform: rotate(45deg) translate(-4px, -2px);
+      }
+
+      &::before {
+        transform: rotate(-45deg) translate(-4px, 2px);
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
 
   &__container,
   &__right {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,6 +93,12 @@
 
     @include desktop {
       gap: 40px;
+    }
+
+    &:not(.footer__right) {
+      @include small-tablet {
+        display: none;
+      }
     }
   }
 
@@ -33,6 +115,10 @@
       font-size: 18px;
     }
 
+    @include small-tablet {
+      font-size: 28px;
+    }
+
     svg {
       width: 34px;
       height: 34px;
@@ -40,6 +126,11 @@
       @include desktop {
         width: 24px;
         height: 24px;
+      }
+
+      @include small-tablet {
+        width: 28px;
+        height: 28px;
       }
     }
 
@@ -60,6 +151,10 @@
 
     @include tablet {
       font-size: 10px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
     }
   }
 }

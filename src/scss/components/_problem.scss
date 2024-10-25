@@ -9,6 +9,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   // &__subtitle {
   //   max-width: 720px;
 
@@ -27,16 +31,22 @@
     @include tablet {
       margin-bottom: 20px;
     }
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
+
   }
 
   &__warning {
@@ -52,8 +62,16 @@
       grid-column: 3 span;
     }
 
+    @include mobile {
+      padding: 20px;
+    }
+
     p {
       max-width: 740px;
+
+      @include mobile {
+        font-size: 10px;
+      }
     }
 
     svg {
@@ -65,11 +83,14 @@
 }
 
 .problem-item {
+  display: flex;
+  width: 100%;
   padding: 60px 40px;
   background-color: #fff;
   border-radius: 50px;
-  display: flex;
   gap: 25px;
+  width: 30%;
+  flex: 1;
 
   @include desktop {
     padding: 40px;
@@ -79,6 +100,14 @@
 
   @include tablet {
     padding: 20px;
+  }
+
+  @include small-tablet {
+    width: 45%;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 
   &__left {

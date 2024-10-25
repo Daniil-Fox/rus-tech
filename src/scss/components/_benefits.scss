@@ -9,6 +9,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
 
@@ -25,6 +29,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    @media (max-width: 900px) {
+      display: flex;
+      gap: 0;
+    }
   }
 
   &--sec {
@@ -41,6 +50,10 @@
 
   @include desktop {
     gap: 10px;
+  }
+
+  @media (max-width: 900px) {
+    width: 214px;
   }
 
   &__capture {

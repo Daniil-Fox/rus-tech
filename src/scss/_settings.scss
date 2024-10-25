@@ -140,6 +140,10 @@ a {
   @include tablet {
     font-size: 18px;
   }
+
+  @include small-tablet {
+    font-size: 16px;
+  }
 }
 
 .title2 {
@@ -158,6 +162,14 @@ a {
   @include tablet {
     font-size: 38px;
   }
+
+  @include small-tablet {
+    font-size: 30px;
+  }
+
+  @include mobile {
+    font-size: 26px;
+  }
 }
 
 .subtitle {
@@ -173,6 +185,14 @@ a {
 
   @include tablet {
     font-size: 24px;
+  }
+
+  @include small-tablet {
+    font-size: 20px;
+  }
+
+  @include mobile {
+    font-size: 18px;
   }
 }
 

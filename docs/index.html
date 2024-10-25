@@ -140,6 +140,42 @@
 
         <a href="#" class="btn btn-reset header__btn btn">Связаться с нами</a>
       </div>
+
+      <button class="header__burger btn-reset">
+        <div class="line"></div>
+      </button>
+      <div class="menu">
+  <div class="menu__body">
+    <div class="menu__content">
+      <div class="header__col menu__col">
+        <a href="tel:88003021333" class="header__tel">
+          8 800 302 13 33
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.4918 4.21465C10.0013 2.84512 7.71034 2.84512 6.21988 4.21465C6.15884 4.27074 6.09367 4.33592 6.00906 4.42055L4.73761 5.692C3.4582 6.97141 2.92111 8.8158 3.31362 10.5821C5.54057 20.6034 13.367 28.4298 23.3883 30.6568C25.1546 31.0493 26.999 30.5122 28.2784 29.2328L29.5497 27.9614C29.6344 27.8768 29.6996 27.8116 29.7557 27.7505C31.1253 26.26 31.1253 23.9691 29.7557 22.4786C29.6996 22.4175 29.6344 22.3524 29.5497 22.2677L27.4683 20.1862C26.0231 18.7411 23.8407 18.3278 21.9672 19.1444C20.8946 19.6119 19.6452 19.3753 18.8179 18.548L15.4224 15.1525C14.5951 14.3252 14.3584 13.0757 14.826 12.0032C15.6426 10.1297 15.2293 7.94727 13.7842 6.50213L11.7026 4.42058C11.618 4.33593 11.5528 4.27075 11.4918 4.21465Z"
+              fill="#76B711"
+            />
+          </svg>
+        </a>
+        <p class="header__addr menu__addr">
+          г. Липецк, ул. Крайняя 6, офис 309
+        </p>
+        <span class="menu__logo">
+          <img src="./img/logo.webp" alt="" />
+        </span>
+      </div>
+
+      <a href="#" class="btn btn-reset header__btn btn">Связаться с нами</a>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 </header>
@@ -149,14 +185,16 @@
   <div class="container">
     <div class="hero__container">
       <div class="hero__content">
-        <h1 class="hero__title">ЭФФЕКТИВНОЕ<br />ХРАНЕНИЕ ЗЕРНА</h1>
+        <h1 class="hero__title">ЭФФЕКТИВНОЕ <span>ХРАНЕНИЕ ЗЕРНА</span></h1>
         <p class="hero__subtitle">
           РЕШЕНИЯ И ВОЗМОЖНОСТИ ДЛЯ АГРАРНЫХ ПРЕДПРИЯТИЙ ЛЮБОГО МАСШТАБА
         </p>
-        <p class="hero__desc">
-          Сохраните урожай и увеличьте прибыль с нашим оборудованием
-        </p>
-        <a href="#" class="btn btn-reset hero__btn">Получить консультацию</a>
+        <div class="hero__extra">
+          <p class="hero__desc">
+            Сохраните урожай и увеличьте прибыль с нашим оборудованием
+          </p>
+          <a href="#" class="btn btn-reset hero__btn">Получить консультацию</a>
+        </div>
       </div>
 
       <div class="hero__right">
@@ -172,6 +210,16 @@
           <span class="hero-item__fig">32%</span>
           <p class="hero-item__capture">Экономия<br />денег</p>
         </div>
+
+        <div class="hero__img">
+          <img src="./img/hero-bg.webp" alt="" />
+        </div>
+      </div>
+      <div class="hero__extra hero__extra--mob">
+        <p class="hero__desc">
+          Сохраните урожай и увеличьте прибыль с нашим оборудованием
+        </p>
+        <a href="#" class="btn btn-reset hero__btn">Получить консультацию</a>
       </div>
     </div>
   </div>
@@ -469,71 +517,73 @@
         предприятий любого масштаба
       </p>
     </div>
-    <div class="prod__container">
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/vlaga.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">Оборудование для определения влаги</p>
-        </div>
-      </a>
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/termo.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">
-            Термоштанга с двухстрочным цифровым электронным блоком
-          </p>
-          <p class="prod-item__capture">Модель ТШЭ-2-3,5</p>
-        </div>
-      </a>
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/probo.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">Пробоотборник мешочный</p>
-          <p class="prod-item__capture">Модель ЩМ</p>
-        </div>
-      </a>
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/ventil.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">Вентилятор вороха</p>
-          <p class="prod-item__capture">Модель Вихрь 2000</p>
-        </div>
-      </a>
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/schup.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">Щуп для фумигации</p>
-          <p class="prod-item__capture">Модель ЩВ</p>
-        </div>
-      </a>
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/vorosh.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">Ворошитель зерна</p>
-          <p class="prod-item__capture">Модель В3/B3-2</p>
-        </div>
-      </a>
-      <a href="#" class="prod__item prod-item">
-        <div class="prod-item__img">
-          <img src="./img/prod/probo-corn.webp" alt="" />
-        </div>
-        <div class="prod-item__info">
-          <p class="prod-item__name">Пробоотборник зерновой многоуровневый</p>
-          <p class="prod-item__capture">Модель ПЗМ-3-5-200</p>
-        </div>
-      </a>
+    <div class="swiper prod__slider">
+      <div class="prod__container swiper-wrapper">
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/vlaga.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">Оборудование для определения влаги</p>
+          </div>
+        </a>
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/termo.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">
+              Термоштанга с двухстрочным цифровым электронным блоком
+            </p>
+            <p class="prod-item__capture">Модель ТШЭ-2-3,5</p>
+          </div>
+        </a>
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/probo.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">Пробоотборник мешочный</p>
+            <p class="prod-item__capture">Модель ЩМ</p>
+          </div>
+        </a>
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/ventil.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">Вентилятор вороха</p>
+            <p class="prod-item__capture">Модель Вихрь 2000</p>
+          </div>
+        </a>
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/schup.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">Щуп для фумигации</p>
+            <p class="prod-item__capture">Модель ЩВ</p>
+          </div>
+        </a>
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/vorosh.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">Ворошитель зерна</p>
+            <p class="prod-item__capture">Модель В3/B3-2</p>
+          </div>
+        </a>
+        <a href="#" class="prod__item swiper-slide prod-item">
+          <div class="prod-item__img">
+            <img src="./img/prod/probo-corn.webp" alt="" />
+          </div>
+          <div class="prod-item__info">
+            <p class="prod-item__name">Пробоотборник зерновой многоуровневый</p>
+            <p class="prod-item__capture">Модель ПЗМ-3-5-200</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>

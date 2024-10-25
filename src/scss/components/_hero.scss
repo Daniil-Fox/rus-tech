@@ -1,24 +1,81 @@
 .hero {
   padding-top: 213px;
-  background-image: url('./../img/hero-bg.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
-  border-radius: 0 0 330px 330px;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 0 310px 310px;
 
   @include desktop {
     border-radius: 0 0 100px 100px;
+    padding-top: 150px;
   }
+
+  @include tablet {
+    padding-top: 60px;
+    border-radius: 0 0 70px 70px;
+  }
+
+  @include small-tablet {
+    padding-top: 40px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+  }
+
+  @media (max-width: 900px) {
+    border-radius: 0;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.1);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+
+      @include mobile {
+        object-position: left;
+      }
+    }
+  }
+
+
 
   &__container {
     display: flex;
     align-items: flex-end;
     width: 100%;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__content {
     padding-bottom: 100px;
+
+    @media (max-width: 900px) {
+      padding-bottom: 20px;
+    }
   }
 
   &__title {
@@ -30,8 +87,28 @@
     line-height: 110%;
     color: #fff;
 
+    @media (max-width: 900px) {
+      color: #333;
+    }
+
+    span {
+      display: block;
+
+      @media (max-width: 900px) {
+        color: #76b711;
+      }
+    }
+
     @include desktop {
       font-size: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 38px;
+    }
+
+    @include mobile {
+      font-size: 30px;
     }
   }
 
@@ -47,6 +124,30 @@
       font-size: 24px;
       max-width: 460px;
     }
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    @media (max-width: 900px) {
+      color: #333;
+    }
+  }
+
+  &__extra {
+    margin-top: 30px;
+
+    @include small-tablet {
+      display: none;
+    }
+
+    &--mob {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
   }
 
   &__desc {
@@ -60,6 +161,20 @@
     @include desktop {
       font-size: 20px;
     }
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @media (max-width: 900px) {
+      color: #333;
+    }
+  }
+
+  &__btn {
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__right {
@@ -68,6 +183,21 @@
     align-items: flex-end;
     gap: 40px;
     margin-left: auto;
+
+    @media (max-width: 900px) {
+      position: relative;
+      margin: unset;
+      width: 100%;
+      justify-content: center;
+
+
+      border-radius: 30px;
+      overflow: hidden;
+      gap: 20px;
+
+      padding: 0 35px;
+      padding-top: 150px;
+    }
   }
 }
 
@@ -81,6 +211,23 @@
 
   @include desktop {
     width: 170px;
+    --interval: 35px;
+  }
+
+  @include tablet {
+    width: 125px;
+  }
+
+  @media (max-width: 900px) {
+    width: 170px;
+    border-radius: 240px 240px 0 0;
+  }
+
+  @include mobile {
+    border-radius: 80px 80px 0 0;
+    width: auto;
+    flex: 1;
+    --interval: 6px;
   }
 
   &__fig {
@@ -95,6 +242,14 @@
     @include desktop {
       font-size: 40px;
     }
+
+    @include tablet {
+      font-size: 25px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__capture {
@@ -108,13 +263,25 @@
     @include desktop {
       font-size: 14px;
     }
+
+    @include tablet {
+      font-size: 10px;
+    }
+
+    @include mobile {
+      font-size: 6px;
+    }
   }
 
   &:nth-child(1) {
     padding: 67.5px var(--interval);
 
     @include desktop {
-      padding: 57px 35px;
+      padding: 57px var(--interval);
+    }
+
+    @include mobile {
+      padding: 36px var(--interval);
     }
   }
 
@@ -122,7 +289,7 @@
     padding: 124px var(--interval);
 
     @include desktop {
-      padding: 72px 18px;
+      padding: 72px calc(var(--interval) / 2);
 
       .hero-item__fig {
         font-size: 52px;
@@ -133,13 +300,39 @@
         font-size: 18px;
       }
     }
+
+    @include tablet {
+      .hero-item__fig {
+        font-size: 40px;
+      }
+
+      .hero-item__capture {
+        font-size: 14px;
+      }
+    }
+
+    @include mobile {
+      padding: 40px var(--interval);
+
+      .hero-item__fig {
+        font-size: 26px;
+      }
+
+      .hero-item__capture {
+        font-size: 8px;
+      }
+    }
   }
 
   &:nth-child(3) {
     padding: 90px var(--interval);
 
     @include desktop {
-      padding: 57px 35px;
+      padding: 57px var(--interval);
+    }
+
+    @include mobile {
+      padding: 36px var(--interval);
     }
   }
 }

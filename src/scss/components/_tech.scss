@@ -9,18 +9,41 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 
   &__title {
     margin: 0;
     margin-bottom: 30px;
 
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 110%;
+    color: #000;
+
     @include desktop {
       margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    @include small-tablet {
+      font-size: 24px;
+    }
+
+    @include mobile {
+      font-size: 20px;
     }
   }
 
@@ -34,6 +57,11 @@
       padding: 40px;
     }
 
+    @include small-tablet {
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+    }
 
   }
 
@@ -45,6 +73,14 @@
     position: relative;
     border-radius: 30px;
     overflow: hidden;
+
+    @include small-tablet {
+      height: 450px;
+    }
+
+    @include mobile {
+      height: 350px;
+    }
 
     img {
       position: absolute;

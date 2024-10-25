@@ -9,6 +9,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
 
@@ -19,12 +23,20 @@
     @include tablet {
       margin-bottom: 20px;
     }
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -38,6 +50,9 @@
       .imp-item__capture {
         max-width: 200px;
 
+        @include small-tablet {
+          max-width: 100%;
+        }
       }
     }
   }

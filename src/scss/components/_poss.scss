@@ -9,6 +9,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__header {
     margin-bottom: 70px;
     max-width: 740px;
@@ -20,6 +24,10 @@
     @include tablet {
       margin-bottom: 20px;
     }
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__items {
@@ -29,6 +37,10 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
     }
   }
 

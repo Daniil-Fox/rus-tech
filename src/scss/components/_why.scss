@@ -9,6 +9,10 @@
     padding: 40px 0;
   }
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__subtitle {
     max-width: 500px;
   }
@@ -62,10 +66,18 @@
       padding: 24px 20px;
     }
 
+    @include small-tablet {
+      min-width: 100%;
+    }
+
     &:nth-child(4n + 4),
     &:nth-child(5n + 5) {
       min-width: 40%;
       flex: 1;
+
+      @include small-tablet {
+        min-width: 100%;
+      }
     }
 
 

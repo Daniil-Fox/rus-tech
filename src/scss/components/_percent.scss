@@ -1,4 +1,8 @@
 .percent {
+  @include small-tablet {
+    display: none;
+  }
+
   &__container {
     padding: 64px 150px;
     border-radius: 30px;
@@ -30,6 +34,10 @@
 
       @include desktop {
         font-size: 110px;
+      }
+
+      @include tablet {
+        font-size: 100px;
       }
     }
 
